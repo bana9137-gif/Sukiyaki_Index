@@ -26,7 +26,7 @@ body {
     background-color: #000;
     overflow: hidden;
 }
-
+/* 圖片變淡之後保持最後狀態 */
 .hero-section::before {
     content: "";
     position: absolute;
@@ -41,8 +41,13 @@ body {
 }
 
 @keyframes fadeImg {
-    from { opacity: 1; }
-    to { opacity: 0.4; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.4;
+    }
 }
 
 .restaurant-title {
@@ -68,11 +73,18 @@ body {
     animation: fadeIn 1.5s forwards;
 }
 
-.h2-delay { animation-delay: 1s; }
-.h5-delay { animation-delay: 1.7s; }
+.h2-delay {
+    animation-delay: 1s;
+}
+
+.h5-delay {
+    animation-delay: 1.7s;
+}
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -81,7 +93,9 @@ body {
 
 
 /* --- 最新消息區塊 --- */
-.news-static-section { background-color: #1e1919; }
+.news-static-section {
+    background-color: #1e1919;
+}
 
 .news-main-poster .img-wrapper {
     aspect-ratio: 1 / 1;
@@ -97,7 +111,9 @@ body {
     transition: transform 0.5s ease;
 }
 
-.news-main-poster:hover img { transform: scale(1.05); }
+.news-main-poster:hover img {
+    transform: scale(1.05);
+}
 
 .news-main-title {
     color: white;
@@ -112,7 +128,9 @@ body {
     margin-left: 10px;
 }
 
-.news-list-container { margin-top: 20px; }
+.news-list-container {
+    margin-top: 20px;
+}
 
 .news-item {
     display: flex;
@@ -158,7 +176,6 @@ body {
     max-width: 400px;
     height: 140px;
     color: #fffdf5;
-    text-align: center;
     border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
@@ -177,11 +194,21 @@ body {
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-.price-basic { background: linear-gradient(145deg, #cc8d8d, #b37a7a); }
-.price-beef { background: linear-gradient(145deg, #965151, #7a4242); }
-.price-wagyu { background: linear-gradient(145deg, #68422f, #4d3123); }
+.price-basic {
+    background: linear-gradient(145deg, #cc8d8d, #b37a7a);
+}
 
-.price-section { background-color: #0c0b0b; }
+.price-beef {
+    background: linear-gradient(145deg, #965151, #7a4242);
+}
+
+.price-wagyu {
+    background: linear-gradient(145deg, #68422f, #4d3123);
+}
+
+.price-section {
+    background-color: #0c0b0b;
+}
 
 .price .title {
     font-size: 26px;
@@ -199,17 +226,28 @@ body {
 }
 
 /* Modal 彈出視窗 */
-.modal-backdrop { background-color: rgba(0, 0, 0, 0.85); }
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
 .modal-content {
     background-color: transparent !important;
     border: none !important;
 }
+
 .modal-content img {
     max-height: 90vh;
     object-fit: contain;
     border: 2px solid #c5a059;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
+
+
+
+
+
+
+
 
 /* --- Carousel Slide 設定 --- */
 .carousel-item {
@@ -255,11 +293,28 @@ body {
 }
 
 @media (max-width: 767px) {
-    .carousel-item { height: auto; }
-    .carousel-flex-row { flex-direction: column; }
-    .carousel-content-box, .carousel-image-box { flex: 0 0 100%; width: 100%; }
-    .carousel-content-box { padding: 3rem 1.5rem; text-align: center; }
-    .carousel-image-box { height: 300px; }
+    .carousel-item {
+        height: auto;
+    }
+
+    .carousel-flex-row {
+        flex-direction: column;
+    }
+
+    .carousel-content-box,
+    .carousel-image-box {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .carousel-content-box {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .carousel-image-box {
+        height: 300px;
+    }
 }
 
 
@@ -272,16 +327,19 @@ body {
     position: relative;
     background-color: #0c0b0b;
     z-index: 1;
-    padding: 5rem 0; /* 建議補上上下間距 */
+    padding: 5rem 0;
+
 }
 
 .shop::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    /* 關鍵路徑修改：加上 ../ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('../img/location_BG.png') no-repeat center center/cover;
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: -1;
 }
 
@@ -328,7 +386,9 @@ body {
     transition: opacity 0.3s;
 }
 
-.map-link:hover { opacity: 0.8; }
+.map-link:hover {
+    opacity: 0.8;
+}
 
 
 
@@ -337,7 +397,9 @@ body {
 
 
 /* --- 聯絡資訊 --- */
-.contact { background-color: #282424; }
+.contact {
+    background-color: #282424;
+}
 
 .qr-container {
     padding: 20px;
