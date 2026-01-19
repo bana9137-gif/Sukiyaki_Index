@@ -1,0 +1,360 @@
+/* --- 全域設定 --- */
+body {
+    background-color: #1b1616;
+}
+
+.font-serif {
+    font-family: "Noto Serif TC", serif;
+}
+
+.navbarLogo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+/* --- Hero Section Cover設定及動態 --- */
+.hero-section {
+    position: relative;
+    height: 700px;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/image_03.jpg') no-repeat center center/cover;
+    animation: fadeImg 1.5s forwards;
+    animation-delay: 0.3s;
+    z-index: 1;
+}
+
+@keyframes fadeImg {
+    from { opacity: 1; }
+    to { opacity: 0.4; }
+}
+
+.restaurant-title {
+    min-width: 800px;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.fade-in-text {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.h2-delay { animation-delay: 1s; }
+.h5-delay { animation-delay: 1.7s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+
+
+
+
+
+/* --- 最新消息區塊 --- */
+.news-static-section { background-color: #1e1919; }
+
+.news-main-poster .img-wrapper {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 4px solid #694242;
+    border-radius: 10px;
+}
+
+.news-main-poster .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-main-poster:hover img { transform: scale(1.05); }
+
+.news-main-title {
+    color: white;
+    border-left: 5px solid #694242;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.news-main-title small {
+    font-size: 1rem;
+    color: #694242;
+    margin-left: 10px;
+}
+
+.news-list-container { margin-top: 20px; }
+
+.news-item {
+    display: flex;
+    padding: 18px 5px;
+    text-decoration: none;
+    color: #ddd;
+    border-bottom: 1px dotted #694242;
+    transition: background 0.3s ease;
+}
+
+.news-item:hover {
+    background-color: rgba(170, 101, 101, 0.3);
+    color: white;
+}
+
+.news-date {
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 30px;
+    color: #cc8d8d;
+    font-weight: bold;
+}
+
+.news-subject {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+/* --- 價目表格式 --- */
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    height: 140px;
+    color: #fffdf5;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.price:hover {
+    transform: translateY(-8px);
+    filter: brightness(1.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.price-basic { background: linear-gradient(145deg, #cc8d8d, #b37a7a); }
+.price-beef { background: linear-gradient(145deg, #965151, #7a4242); }
+.price-wagyu { background: linear-gradient(145deg, #68422f, #4d3123); }
+
+.price-section { background-color: #0c0b0b; }
+
+.price .title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+    font-family: "Noto Serif TC", serif;
+}
+
+.price .subtitle {
+    font-size: 13px;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* Modal 彈出視窗 */
+.modal-backdrop { background-color: rgba(0, 0, 0, 0.85); }
+.modal-content {
+    background-color: transparent !important;
+    border: none !important;
+}
+.modal-content img {
+    max-height: 90vh;
+    object-fit: contain;
+    border: 2px solid #c5a059;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Carousel Slide 設定 --- */
+.carousel-item {
+    height: 800px;
+    background-color: #231d1d;
+}
+
+.carousel-flex-row {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+.carousel-content-box {
+    flex: 0 0 50%;
+    color: white;
+    text-align: left;
+    padding-left: 10vw;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.description {
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+.carousel-image-box {
+    flex: 0 0 50%;
+    height: 100%;
+}
+
+.carousel-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .carousel-item { height: auto; }
+    .carousel-flex-row { flex-direction: column; }
+    .carousel-content-box, .carousel-image-box { flex: 0 0 100%; width: 100%; }
+    .carousel-content-box { padding: 3rem 1.5rem; text-align: center; }
+    .carousel-image-box { height: 300px; }
+}
+
+
+
+
+
+
+/* --- 分店資訊 --- */
+.shop {
+    position: relative;
+    background-color: #0c0b0b;
+    z-index: 1;
+    padding: 5rem 0; /* 建議補上上下間距 */
+}
+
+.shop::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* 關鍵路徑修改：加上 ../ */
+    background: url('../img/location_BG.png') no-repeat center center/cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.shop-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 2px solid #694242;
+    background-color: #211818;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    background-color: #402929;
+}
+
+.shop-info {
+    padding: 15px;
+    border-bottom: 1px solid #7d5959;
+    flex-grow: 1;
+}
+
+.shop-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.shop-address {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #cc8d8d;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+
+.map-link:hover { opacity: 0.8; }
+
+
+
+
+
+
+
+/* --- 聯絡資訊 --- */
+.contact { background-color: #282424; }
+
+.qr-container {
+    padding: 20px;
+    background-color: #181111;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.qr-container:hover {
+    transform: translateY(-5px);
+    background-color: #7b6161;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 5px;
+}

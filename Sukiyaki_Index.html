@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SukiyakiIndex</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+  <link rel="stylesheet" href="css/Sukiyaki.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+
+  <!--導覽欄-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid ps-5">
+      <!--左側選項-->
+      <a class="navbarLogo" href="#"><img src="img/Logo_titleWh.png"></a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--右側選項-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto pe-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#">關於品牌</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">餐廳據點</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">臺北 大安店</a></li>
+              <li><a class="dropdown-item" href="#">臺北 民生店</a></li>
+              <li><a class="dropdown-item" href="#">臺北 南京復興店</a></li>
+              <li><a class="dropdown-item" href="#">新北 中和環球店</a></li>
+              <li><a class="dropdown-item" href="#">新竹 巨城店</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">菜單介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">線上預訂</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">人才招募</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!--hero-->
+  <div class="hero-section bg-dark" style="background-color: #000;">
+    <div class="hero-text">
+      <img src="img/Logo_Wh.png" alt="一葉壽喜燒" class="img-fluid restaurant-title fade-in-text h2-delay">
+      <p></p>
+      <h5 class="fade-in-text h5-delay fw-bold font-serif">在沸騰的煙火氣中，尋回食材最真摯的本味</h5>
+    </div>
+  </div>
+
+
+
+
+  <!--活動區-->
+  <section class="news-static-section py-5">
+    <div class="container" style="max-width: 75rem;">
+      <div class="row g-5 align-items-start">
+
+        <div class="col-md-4">
+          <div class="news-main-poster">
+            <a href="monthly-event.html" target="_blank">
+              <div class="img-wrapper">
+                <img src="img/month_event03.png" alt="本月活動大圖" class="img-fluid">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <h2 class="news-main-title mb-4">最新消息 <small>LATEST NEWS</small></h2>
+
+          <div class="news-list-container">
+            <a href="news-detail.html" class="news-item">
+              <span class="news-date">2026.01.19</span>
+              <span class="news-subject">【公告】線上訂位系統維護通知 (01:00 - 05:00)</span>
+            </a>
+
+            <a href="news-detail.html" class="news-item">
+              <span class="news-date">2026.01.10</span>
+              <span class="news-subject">【活動】新年限定！二月份四人同行，每人贈精選甜點一份</span>
+            </a>
+
+            <a href="news-detail.html" class="news-item">
+              <span class="news-date">2026.01.01</span>
+              <span class="news-subject">【新菜】冬季料理新上市，邀您品嚐大地的饋贈</span>
+            </a>
+
+            <a href="news-detail.html" class="news-item">
+              <span class="news-date">2025.12.15</span>
+              <span class="news-subject">【招募】尋找熱愛美食的夥伴！各分店外場職缺招募中</span>
+            </a>
+
+            <a href="news-detail.html" class="news-item">
+              <span class="news-date">2025.11.11</span>
+              <span class="news-subject">【分店】台北大安店限定，平日晚間用餐享 9 折優惠</span>
+            </a>
+            <P></P>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--價目表-->
+  <div class="container-fluid">
+    <div class="row justify-content-center py-5 px-3 g-3 price-section">
+      <div class="price price-basic" role="button" data-bs-toggle="modal" data-bs-target="#modalBasic">
+        <div class="title">精選豚雞放題</div>
+        <div class="subtitle">鮮嫩豚雞，野菜季節限定</div>
+      </div>
+
+      <div class="price price-beef" role="button" data-bs-toggle="modal" data-bs-target="#modalBeef">
+        <div class="title">極致三道盛合</div>
+        <div class="subtitle">豚雞牛三賞，濃郁肉汁首選</div>
+      </div>
+
+      <div class="price price-wagyu" role="button" data-bs-toggle="modal" data-bs-target="#modalWagyu">
+        <div class="title">究極和牛特賞</div>
+        <div class="subtitle">頂級霜降和牛，夢幻旨味覺醒</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalBasic" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0 text-center">
+          <img src="img/price_Menu.jpg" class="img-fluid rounded" alt="一般方案菜單">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalBeef" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0 text-center">
+          <img src="img/price_Menu02.jpg" class="img-fluid rounded" alt="牛肉方案菜單">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalWagyu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0 text-center">
+          <img src="img/price_Menu03.jpg" class="img-fluid rounded" alt="和牛方案菜單">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 圖片切換 -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-flex-row">
+          <div class="carousel-content-box">
+            <h2 class="display-4 fw-bold font-serif">頂級和牛饗宴</h2>
+            <h5 class="fw-bold font-serif">來自日本產地直送，入口即化的極致口感。</h5>
+            <p></p>
+            <P class="description">我們嚴選來自日本頂尖牧場的 A5
+              等級和牛，每一片肉質都具備如大理石紋路般均勻細緻的「霜降」油花。當鮮紅肉片輕輕觸碰微沸的琥珀色秘製醬汁，油脂隨即在舌尖適溫下昇華，釋放出和牛特有的奶油芳香與甘甜肉汁。
+              <br>
+              搭配滑順鮮美的有機蛋液一同入口，絲綢般的質地與濃郁的風味在口腔中完美交織，化作層次分明的鮮美回韻。
+            </P>
+          </div>
+          <div class="carousel-image-box">
+            <img src="img/image_carousel_01.png" alt="Wagyu Beef">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-flex-row">
+          <div class="carousel-content-box">
+            <h2 class="display-4 fw-bold font-serif">有機田園野菜</h2>
+            <h5 class="fw-bold font-serif">嚴選在地小農當季鮮採，品嚐大地的純淨原味。</h5>
+            <p></p>
+            <P class="description padding-right: 10px">
+              除了頂級肉品，清甜的野菜更是壽喜燒不可或缺的靈魂。我們與在地小農建立長期合作關係，依據節氣更迭，挑選當季最肥美的時令蔬菜。從清晨帶露採收，到直接送抵餐桌，我們極力縮短產地距離，只為完整保留蔬菜最原始的鮮脆質地與營養。
+              <br>
+              這些吸飽陽光精華的野菜，在滾燙的醬汁中輕輕熬煮，緩緩釋放出自然的清香甘甜，精準地中和了和牛油脂的醇厚，為整體口感帶來一抹優雅的平衡。
+            </P>
+          </div>
+          <div class="carousel-image-box">
+            <img src="img/image_carousel_04.png" alt="Seafood">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-flex-row">
+          <div class="carousel-content-box">
+            <h2 class="display-4 fw-bold font-serif">秘製琥珀靈魂</h2>
+            <h5 class="fw-bold font-serif">職人手作黃金比例，勾勒跨越百年的鹹甜平衡。</h5>
+            <p></p>
+            <P class="description padding-right: 10px">
+              壽喜燒的靈魂所在，全寄託於這一鍋色澤深邃的琥珀醬汁。我們堅持遵循日本傳統「割下」製法，嚴選天然釀造的特級醬油、上等三溫糖與醇厚純米清酒，經過職人長時間慢火熬煮，讓素材在熱力催化下徹底交融，淬鍊出不帶一絲雜質的「旨味」精華，每一滴都蘊含著對時間與工藝的敬意。
+              <br>
+              它溫柔地包裹著每一片豐腴和牛，將油脂轉化為細膩甘醇，並在鹹與甜的交鋒中尋得極致平衡。這份歷經千錘百鍊的秘方，不僅是食材間的味覺橋樑，更是整場饗宴最深沉的底蘊。
+            </P>
+          </div>
+          <div class="carousel-image-box">
+            <img src="img/image_carousel_08.png" alt="Fresh Vegetables">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+  <!--分店資訊-->
+  <div class="container-fluid py-5 shop">
+    <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+
+      <div class="col" style="max-width: 600px;">
+        <div class="shop-card">
+          <div class="shop-info">
+            <div class="shop-name">臺北 大安店</div>
+            <div class="shop-address">臺北市大安區復興南路二段9號</div>
+            <a href="https://maps.app.goo.gl/Uff41ySEk7Kfx4Py8" target="_blank" class="map-link">
+              <span class="material-symbols-outlined">
+                location_on
+              </span>
+              &nbsp;查看分店位置
+            </a>
+          </div>
+          <div class="shop-image">
+            <img src="img/location_A01.jpg" alt="臺北大安店" class="img-fluid">
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="col" style="max-width: 600px;">
+        <div class="shop-card">
+          <div class="shop-info">
+            <div class="shop-name">臺北 南京復興店</div>
+            <div class="shop-address">臺北市松山區南京東路三段303巷24號</div>
+            <a href="https://maps.app.goo.gl/WZsjSSukvdyJE2tG9" target="_blank" class="map-link">
+              <span class="material-symbols-outlined">
+                location_on
+              </span>
+              &nbsp;查看分店位置
+            </a>
+          </div>
+          <div class="shop-image">
+            <img src="img/location_F01.jpg" alt="臺北南京復興店" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="col" style="max-width: 600px;">
+        <div class="shop-card">
+          <div class="shop-info">
+            <div class="shop-name">臺北 民生店</div>
+            <div class="shop-address">臺北市松山區民生東路四段125號</div>
+            <a href="https://maps.app.goo.gl/pk3Heu6t6xGRqCHWA" target="_blank" class="map-link">
+              <span class="material-symbols-outlined">
+                location_on
+              </span>
+              &nbsp;查看分店位置
+            </a>
+          </div>
+          <div class="shop-image">
+            <img src="img/location_B01.png" alt="臺北民生店" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col" style="max-width: 600px;">
+        <div class="shop-card">
+          <div class="shop-info">
+            <div class="shop-name">新北 中和環球店</div>
+            <div class="shop-address">新北市中和區中山路三段122號4樓</div>
+            <a href="https://maps.app.goo.gl/Uff41ySEk7Kfx4Py8" target="_blank" class="map-link">
+              <span class="material-symbols-outlined">
+                location_on
+              </span>
+              &nbsp;查看分店位置
+            </a>
+          </div>
+          <div class="shop-image">
+            <img src="img/location_D01.jpg" alt="新北中和環球店" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="col" style="max-width: 600px;">
+        <div class="shop-card">
+          <div class="shop-info">
+            <div class="shop-name">新竹 巨城店</div>
+            <div class="shop-address">新竹市東區中央路229號7樓</div>
+            <a href="https://maps.app.goo.gl/fuH9qWHDwegHwYha7" target="_blank" class="map-link">
+              <span class="material-symbols-outlined">
+                location_on
+              </span>
+              &nbsp;查看分店位置
+            </a>
+          </div>
+          <div class="shop-image">
+            <img src="img/location_C01.png" alt="新竹巨城店" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!--聯絡資訊-->
+  <section class="contact py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-md-1">
+        </div>
+
+        <div class="col-md-5 text-center">
+          <div class="footer-logo mb-3">
+            <img src="img/Logo_titleWh.png" alt="Logo" class="img-fluid" style="max-width: 300px;">
+          </div>
+          <div class="contact-info text-white">
+            <p class="mb-1">訂位服務電話：</p>
+            <h4 class="fw-bold mb-4" style="color: #cc8d8d;">02-2345-6789</h4>
+            <a href="#" class="btn btn-outline-light px-4 py-2">線上訂位</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="qr-container">
+            <p class="text-white mb-3 padding-right: 10px">追蹤 Instagram</p>
+            <a href="https://www.instagram.com/"><img src="img/socialQR.png" alt="IG QR Code" class="qr-code"></a>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="qr-container">
+            <p class="text-white mb-3">LINE 官方帳號</p>
+            <a href="http://ne.me/tw/"><img src="img/lineQR.png" alt="Line QR Code" class="qr-code"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
