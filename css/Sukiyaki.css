@@ -7,11 +7,30 @@ body {
     font-family: "Noto Serif TC", serif;
 }
 
-.navbarLogo img {
+.navbar-brand img {
     height: 40px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
+}
+.nav-brand-img:hover {
+    transform: scale(1.05);
+}
+
+/* 核心：解決文字斷行與間距問題 */
+.navbar-nav .nav-link {
+    white-space: nowrap;      /* 1. 強制不斷行 */
+    padding-left: 1.2rem !important;  /* 2. 增加左右間距讓文字有呼吸空間 */
+    padding-right: 1.2rem !important;
+}
+
+/* 針對下拉選單在大螢幕的質感優化 */
+@media (min-width: 992px) {
+    .dropdown-menu {
+        border-radius: 0;
+        border-top: 2px solid #ffc107; /* 頂部加一條警告橘色，呼應線上預訂 */
+        background-color: rgba(33, 37, 41, 0.95); /* 半透明黑更有質感 */
+    }
 }
 
 
@@ -22,7 +41,7 @@ body {
 /* --- Hero Section Cover設定及動態 --- */
 .hero-section {
     position: relative;
-    height: 700px;
+    height: 60vh;
     background-color: #000;
     overflow: hidden;
 }
@@ -40,6 +59,8 @@ body {
     z-index: 1;
 }
 
+
+
 @keyframes fadeImg {
     from {
         opacity: 1;
@@ -50,12 +71,10 @@ body {
     }
 }
 
+/* 語法：clamp(最小值, 偏好值, 最大值) */
 .restaurant-title {
-    min-width: 800px;
-    max-width: 1000px;
+    width: clamp(20px, 50vw, 800px);
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 .hero-text {
@@ -71,6 +90,13 @@ body {
 .fade-in-text {
     opacity: 0;
     animation: fadeIn 1.5s forwards;
+}
+
+.hero-subtitle {
+    font-family: "Noto Serif TC", serif; 
+    font-weight: 700;                    
+    margin-top: 1rem;    
+    font-size: 2.2vw;                
 }
 
 .h2-delay {
@@ -102,11 +128,20 @@ body {
     overflow: hidden;
     border: 4px solid #694242;
     border-radius: 10px;
+
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .news-main-poster .img-wrapper {
+        max-width: 280px; /* 手機版更小一點，留空間給旁邊的文字 */
+        margin-bottom: 2rem; /* 增加與下方文字的間距 */
+    }
 }
 
 .news-main-poster .img-wrapper img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -272,12 +307,23 @@ body {
     z-index: 1;
 }
 
+.carousel-content-box h2 {
+    margin-bottom: 1.2rem; 
+    letter-spacing: 0.2rem;
+}
+
+.carousel-content-box h5 {
+    margin-bottom: 2.5rem;  
+    color: #cc8d8d;  
+}
+
 .description {
-    line-height: 1.8;
+    line-height: 2;
     letter-spacing: 0.1rem;
     text-align: justify;
     font-weight: 300;
     padding-right: 20px;
+    opacity: 0.9;
 }
 
 .carousel-image-box {
